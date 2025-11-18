@@ -14,7 +14,8 @@ chmod +x ./01_db_splitting.sh
 
 
 ### Script 2: make index (using bowtie2 as an example)
-Since index buiding is usually resource intensive, this part is done using slurm job arrays
+Since index buiding is usually resource intensive, this part is done using slurm job arrays.
+
 Assume using slurm on barnacle2, first updated your email, conda env containing the index-building tool, input & output path, and job array number in 02_bowtie2_build_index_jarray.sh, then run 
 ```
 sbatch 02_bowtie2_build_index_jarray.sh
@@ -23,6 +24,7 @@ sbatch 02_bowtie2_build_index_jarray.sh
 
 ### Script 3: combine samfiles post-alignment
 Make sure your input sams have no headers.
+
 Requires: samtools >= 1.x
 ```
 chmod +x ./03_combine_samfiles.sh
