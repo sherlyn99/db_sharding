@@ -9,6 +9,7 @@ NB: These scripts are currently designed for internal use in the Knight Lab. Ple
 ### Script 1: split the fna file 
 ```
 chmod +x ./01_db_splitting.sh
+# read ./01_db_splitting.sh --help
 ./01_db_splitting.sh -i ./test/input/all.fna -n 5 -o ./test/output/split_fnas
 ```
 
@@ -28,5 +29,6 @@ Make sure your input sams have no headers.
 Requires: samtools >= 1.x
 ```
 chmod +x ./03_combine_samfiles.sh
+# read ./03_combine_samfiles.sh --help
 ./03_combine_samfiles.sh -i ./test/input/sams_noheader -o ./test/output/sams_out
 ```
